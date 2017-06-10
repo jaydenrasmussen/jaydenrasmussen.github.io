@@ -1,103 +1,75 @@
-<!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" rel="stylesheet" integrity="sha384-1L94saFXWAvEw88RkpRz8r28eQMvt7kG9ux3DdCqya/P3CfLNtgqzMnyaUa49Pl2" crossorigin="anonymous">
-    <title>J. Rasmussen</title>
-  </head>
-  <body>
-  <!-- NAV -->
-  <div class="container">
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="index.html">Home</a></li>
-      <!-- BLOG -->
-      <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog
-            <span class="caret"></span</a>
-          <ul class="dropdown-menu">
-            <li><a href="blog/1.html"</li>1</a></li>
-          </ul> -->
-      <!-- PHOTOGRAPHY -->
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photography
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="photo/summer16.html">Summer // 2016</a></li>
-          <li><a href="photo/saltflats.html">Salt Flats // 2017</a></li>
-          <li><a href="photo/spring17.html">Spring // 2017</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <!-- MAIN -->
-  <div class="container" style="padding-top: 1%;">
-    <div class="jumbotron">
-      <h1>J. Rasmussen</h1>
-      <p>I make things.</p>
-    </div>
-  </div>
-    <!--         -->
-    <!-- GALLERY -->
-    <!--         -->
-    <!-- BASIC CAROUSEL -->
-    <div class="container">
-      <div id="theCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#theCarousel" data-slide-to="1"></li>
-          <li data-target="#theCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          
-          <div class="item active">
-            <div class="slide1"></div>
-            <img src="http://i.imgur.com/qzMXmyE.jpg">
-            <div class="carousel-caption">
-              <p>Spring // 2017</p>
-              <p><a href="photo/spring17.html" class="btn btn-info btn-sm">See the whole gallery</a></p>
-            </div>
-          </div>
-          
-          <div class="item">
-            <div class="slide2"></div>
-            <img src="http://i.imgur.com/BxT9JDn.jpg">
-          </div>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jayden Rasmussen</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- import css -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<style type="text/css">
+	.parallax { 
+	    /* The image used */
+	    background-image: url("http://i.imgur.com/qzMXmyE.jpg");
 
-          <div class="item">
-            <div class="slide3"></div>
-            <img src="http://i.imgur.com/vLAB5Ld.jpg">
-          </div>
+	    /* Set a specific height */
+	    height: 610px; 
 
-        </div>
-          
+	    /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	</style>
+	<!-- NAVBAR -->
+	<div class="w3-top">
+		<div class="w3-bar w3-black w3-card-2">
+			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="menu()"
+			title="Menu"><i class="fa fa-bars"></i></a>
+			<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">home</a>
+			<a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">about</a>
+			<a href="photos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">photos</a>
+			<!-- DROPDOWN -->
+		</div>
+	</div>
+	<!-- NAVBAR SMALL SCREENS -->
+	<div id="navSmall" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
+		<a href="#" class="w3-bar-item w3-button w3-padding-large">home</a>
+		<a href="about.html" class="w3-bar-item w3-button w3-padding-large">about</a>
+		<a href="photos.html" class="w3-bar-item w3-button w3-padding-large">photos</a>
+	</div>
+	<!-- MAIN -->
+	<div class="w3-content" style="max-width:2000px;margin-top:46px">
+		<div class="parallax w3-display-container">
+			<div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
+				<h3>I'm Jayden</h3>
+				<h5>I make things</h5>
 
-       <!--  <a class="left carousel-control" href="#theCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="right carousel-control" href="#theCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a> -->
-      </div>
-    <div class="container">
-      <hr>
-      <p>Copyright J. Rasmussen 2017</p>
-    </div>
-    <!-- STYLES -->
-    <style type="text/css" media="screen">
-      .carousel-control.left {background-image: none;}
-      .carousel-control.right {background-image: none;}
-    </style>
-    <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"
-            integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- For touch enabling galleries -->
-    <script src="js/jquery.bcSwipe.min.js"></script>
-    <script type="text/javascript"> $('.carousel').bcSwipe({ threshold: 50 }); </script>
-  </body>
+			</div>
+		</div>
+		<div class="w3-card-4 w3-margin w3-round">
+			<div class="w3-container">
+				<h3>Welcome to Version 1.0!</h3>
+				<h5>
+				<span class="w3-opacity">June 10, 2017</span></h5>
+				<p>The site is all new! Look around, stay a while.</p>
+			</div>
+		</div>
+	</div>
+<!-- import js -->
+	<script type="text/javascript">
+		// MENU 
+		function menu() {
+			var x = document.getElementById('navSmall')
+			if (x.className.indexOf("w3-show") == -1) {
+		        x.className += " w3-show";
+		    } else { 
+		        x.className = x.className.replace(" w3-show", "");
+		    }
+		}
+	</script>
+</body>
 </html>
