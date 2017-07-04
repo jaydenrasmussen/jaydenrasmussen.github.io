@@ -8,19 +8,19 @@ title: photos
 {% include jquery.html %}
 <script type="text/javascript">
     var images =  [
-        {% for post in site.posts %}'{{ post.featured }}'{% unless forloop.last %},{% endunless %}    
+        {% for post in site.categories.gallery %}'{{ post.featured }}'{% unless forloop.last %},{% endunless %}    
         {% endfor %}
     ];
     var names = [
-            {% for post in site.posts %}'{{ post.title }}'{% unless forloop.last %},{% endunless %}    
+            {% for post in site.categories.gallery %}'{{ post.title }}'{% unless forloop.last %},{% endunless %}    
             {% endfor %}
     ];
     var dates = [
-            {% for post in site.posts %}'{{ post.date | date: '%B %d, %Y' }}'{% unless forloop.last %},{% endunless %}    
+            {% for post in site.categories.gallery %}'{{ post.date | date: '%B %d, %Y' }}'{% unless forloop.last %},{% endunless %}    
             {% endfor %}
     ]
     var pages = [
-            {% for post in site.posts %}'{{ post.url }}'{% unless forloop.last %},{% endunless %}    
+            {% for post in site.categories.gallery %}'{{ post.url }}'{% unless forloop.last %},{% endunless %}    
             {% endfor %}
     ]
     // GALLERY FUNCTIONS

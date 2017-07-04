@@ -8,10 +8,26 @@
 </head>
 <body>
 {% include nav.html %}
-<div class="w3-margin" style="padding-top: 46px;">
-        <h3>{{ page.title }}</h3>
-        <h5><span class="w3-opacity">{{ page.date | date: '%B %d, %Y' }}</span></h5>
-{{ content }}
+<div  style="padding-top: 46px;">
+<div class="w3-margin w3-hide-medium w3-hide-large">
+        <div class="w3-card-2">
+                <div class="w3-container w3-padding">
+                        <h3>{{ page.title }}</h3>
+                        <h5><span class="w3-opacity">{{ page.date | date: '%B %d, %Y' }}</span></h5>
+                        {{ content }}
+                </div>
+        </div>
+
+</div>
+
+<div class="w3-display-container w3-margin w3-padding-large w3-hide-small">
+        <div class="w3-container w3-quarter"></div>
+        <div class="w3-container w3-half w3-card-2 w3-padding">
+                <h3>{{ page.title }}</h3>
+                <h5><span class="w3-opacity">{{ page.date | date: '%B %d, %Y' }}</span></h5>
+                {{ content }}
+        </div>
+</div>
 </div>
 </body>
 </html>

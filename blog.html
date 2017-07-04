@@ -12,7 +12,7 @@ title: blog
 {% for post in site.posts %}
         <div class="w3-quarter"><div class="w3-container"></div></div>
         <div class="w3-card-2 w3-margin w3-round w3-half">
-                <a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a>
+                {% if post.layout == 'gallery' %} <a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a> {% endif %}
                 <div class="w3-container">
                         <div class="w3-padding">
                                 <div class="w3-center">
@@ -28,21 +28,19 @@ title: blog
 <!-- Small gallery -->
 <div class="w3-hide-large w3-hide-medium">
 {% for post in site.posts %}
-        {% if post.layout == 'gallery' %}
         <div class="w3-card-2 w3-margin w3-round">
-                <a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a>
-                <div class="w3-container">        
+                {% if post.layout == 'gallery' %}<a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a>{% endif %}
+                <div class="w3-container">
+                        {% if post.layout == 'gallery' %}
                         <div class="w3-padding w3-center">
                                 <h3>{{ post.title }}</h3>
                                 <h5><span class="w3-opacity">{{ post.date | date: '%B %d, %Y' }}</span></h5>
-                                {{ post.excerpt }}
                         </div>
-                </div>
-        </div>
-        {% endif %}
-        {% else %}
-        <div class="w3-card-2 w3-margin w3-round">
-                <div class="w3-container">
+                        {{ post.excerpt }}
+
+                        {% endif %}
+
+                        {% if post.layout == 'post' %}
                         <div class="w3-padding">
                                 <div class="w3-center">
                                         <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
@@ -50,6 +48,12 @@ title: blog
                                 </div>
                                 {{ post.excerpt }}
                         </div>
+                        {% endif %}
+                </div>
+        </div>
+        <div class="w3-card-2 w3-margin w3-round">
+                <div class="w3-container">
+                        
                 </div>
         </div>
 {% endfor %}
