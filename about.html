@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <title>About</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- import css -->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-        <style type="text/css">
+---
+layout: default
+title: about
+---
+<style type="text/css">
         .parallax { 
             /* The image used */
-            background-image: url("http://i.imgur.com/cTyp8Oj.jpg");
+            background-image: url("http://i.imgur.com/eTTJKCQ.jpg");
 
             /* Set a specific height */
-            height: 690px; 
+            height: 610px; 
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
@@ -23,40 +16,33 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-        </style>
-        <!-- NAVBAR -->
-        <div class="w3-top">
-                <div class="w3-bar w3-black w3-card-2">
-                        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="menu()"
-                        title="Menu"><i class="fa fa-bars"></i></a>
-                        <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">home</a>
-                        <a href="#.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">about</a>
-                        <a href="photos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">photos</a>
-                        <!-- DROPDOWN -->
-                </div>
-        </div>
-        <!-- NAVBAR SMALL SCREENS -->
-        <div id="navSmall" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
-                <a href="index.html" class="w3-bar-item w3-button w3-padding-large">home</a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large">about</a>
-                <a href="photos.html" class="w3-bar-item w3-button w3-padding-large">photos</a>
-        </div>
-        <!-- MAIN -->
-        <div class="parallax w3-display-container" style="padding-top: 46px;">
-            <div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
+        a, a:hover { text-decoration: none;
+                     font-weight: normal;
+        }
+</style>
+<div class="parallax w3-display-container">
+        <div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
                 <h3>Hi, I'm Jayden</h3>
-            </div>
+
         </div>
-        <div class="w3-display-container" style="height:609px">
+</div>
+        <div class="w3-half">
         <div class="w3-card-2 w3-margin">
             <div class="w3-padding w3-center">
                 <h2><b>Photography is a habit</b></h2>
                 <h5>Got a great idea? Just want to take some photos?</h5>
-                <p>Let's get in touch!</p>
+                <h5>Let's get in touch!</h5>
                 <br>
-                <p><a href="mailto:jayden.rasmussen@gmail.com">Jayden.Rasmussen@gmail.com</a></p>
+                <h4><a href="mailto:{{ site.email }}">email</a></h4>
+                <div class="w3-container">
+                <h2 class="w3-third"><a href="http://twitter.com/{{ site.twitter_username }}"><span class="fa fa-twitter"></span> </a></h2>
+                <h2 class="w3-third"><a href="http://instagram.com/{{ site.instagram_username }}"><span class="fa fa-instagram"></span></a></h2>
+                <h2 class="w3-third"><a href="http://github.com/{{ site.github_username }}"><span class="fa fa-github"></span></a></h2>
+                </div>
             </div>
         </div>
+        </div>
+        <div class="w3-half">
             <div class="w3-card-2 w3-margin">
                 <div class="w3-padding w3-center">
                 <h2><b>Coding is a passion</b></h2>
@@ -66,25 +52,10 @@
                 <p>Java</p>
                 <p>Javascript</p>
                 <p>jQuery</p>
-                <p>Node</p>
+                <p>Node.js</p>
                 <p>PowerShell</p>
                 <p>SQL</p>
                 <p>Visual Basic</p>
-
                 </div>
             </div>
         </div>
-<!-- import js -->
-        <script type="text/javascript">
-                // MENU 
-                function menu() {
-                        var x = document.getElementById('navSmall')
-                        if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else { 
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
-        </script>
-</body>
-</html>

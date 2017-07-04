@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% include w3css.html %}
+    {% include fa.html %}
+</head>
+<body>
+{% include nav.html %}
+<div class="w3-margin" style="padding-top: 46px;">
+        <h3>{{ page.title }}</h3>
+        <h5><span class="w3-opacity">{{ page.date | date: '%B %d, %Y' }}</span></h5>
+{{ content }}
+</div>
+</body>
+</html>

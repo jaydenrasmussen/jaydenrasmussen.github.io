@@ -1,82 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Jayden Rasmussen</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- import css -->
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<style type="text/css">
-	.parallax { 
-	    /* The image used */
-	    background-image: url("http://i.imgur.com/qzMXmyE.jpg");
+---
+layout: default
+title: J. Rasmussen
+---
+<style type="text/css">
+        a, a:hover { text-decoration: none;
+                  font-weight: normal;
+                }
+        .parallax { 
+            /* The image used */
+            background-image: url("http://i.imgur.com/qzMXmyE.jpg");
 
-	    /* Set a specific height */
-	    height: 610px; 
+            /* Set a specific height */
+            height: 610px; 
 
-	    /* Create the parallax scrolling effect */
-	    background-attachment: fixed;
-	    background-position: center;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	}
-	</style>
-	<!-- NAVBAR -->
-	<div class="w3-top">
-		<div class="w3-bar w3-black w3-card-2">
-			<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="menu()"
-			title="Menu"><i class="fa fa-bars"></i></a>
-			<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">home</a>
-			<a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">about</a>
-			<a href="photos.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">photos</a>
-			<!-- DROPDOWN -->
-		</div>
-	</div>
-	<!-- NAVBAR SMALL SCREENS -->
-	<div id="navSmall" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
-		<a href="#" class="w3-bar-item w3-button w3-padding-large">home</a>
-		<a href="about.html" class="w3-bar-item w3-button w3-padding-large">about</a>
-		<a href="photos.html" class="w3-bar-item w3-button w3-padding-large">photos</a>
-	</div>
-	<!-- MAIN -->
-	<div class="w3-content" style="max-width:2000px;margin-top:46px">
-		<div class="parallax w3-display-container">
-			<div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
-				<h3>I'm Jayden</h3>
-				<h5>I make things</h5>
-
-			</div>
-		</div>
-		<div class="w3-card-4 w3-margin w3-round">
-			<div class="w3-container">
-				<a href="img/canyonese.html"><h3>Canyonese</h3></a>
-				<h5><span class="w3-opacity">June 16, 2017</span></h5>
-				<p>My roommate and I took a trip up east canyon. The views were stellar but, the memories were better.</p>
-			</div>
-		</div>
-		<div class="w3-card-4 w3-margin w3-round">
-			<div class="w3-container">
-				<h3>Welcome to Version 1.0!</h3>
-				<h5>
-				<span class="w3-opacity">June 10, 2017</span></h5>
-				<p>The site is all new! Look around, stay a while.</p>
-			</div>
-		</div>
-	</div>
-<!-- import js -->
-	<script type="text/javascript">
-		// MENU 
-		function menu() {
-			var x = document.getElementById('navSmall')
-			if (x.className.indexOf("w3-show") == -1) {
-		        x.className += " w3-show";
-		    } else { 
-		        x.className = x.className.replace(" w3-show", "");
-		    }
-		}
-	</script>
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+</style>
+<div class="parallax w3-display-container">
+        <div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
+                <h3>I'm Jayden</h3>
+                <h5>I make things</h5>
+        </div>
+</div>
+<!-- Large  -->
+<div class="w3-hide-small w3-center">
+{% for post in site.posts %}
+        <div class="w3-quarter"><div class="w3-container"></div></div>
+        <div class="w3-card-2 w3-margin w3-round w3-half">
+                <a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a>
+                <div class="w3-container">
+                        <div class="w3-padding">
+                                <div class="w3-center">
+                                        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                                        <h5><span class="w3-opacity">{{ post.date | date: '%B %d, %Y' }}</span></h5>
+                                </div>
+                        </div>
+                        {{ post.excerpt }}
+                </div>
+        </div>
+{% endfor %}
+</div>
+<!-- Small gallery -->
+<div class="w3-hide-large w3-hide-medium">
+{% for post in site.posts %}
+        {% if post.layout == 'gallery' %}
+        <div class="w3-card-2 w3-margin w3-round">
+                <a href="{{ post.url }}"><img class="w3-round" src="{{ post.featured }}" style="width:100%"></a>
+                <div class="w3-container">        
+                        <div class="w3-padding w3-center">
+                                <h3>{{ post.title }}</h3>
+                                <h5><span class="w3-opacity">{{ post.date | date: '%B %d, %Y' }}</span></h5>
+                                {{ post.excerpt }}
+                        </div>
+                </div>
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="w3-card-2 w3-margin w3-round">
+                <div class="w3-container">
+                        <div class="w3-padding">
+                                <div class="w3-center">
+                                        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                                        <h5><span class="w3-opacity">{{ post.date | date: '%B %d, %Y' }}</span></h5>
+                                </div>
+                                {{ post.excerpt }}
+                        </div>
+                </div>
+        </div>
+{% endfor %}
+</div>
+{% include foot.html %}
+{% include jquery.html %}
 </body>
 </html>
