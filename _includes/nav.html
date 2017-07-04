@@ -1,7 +1,7 @@
         <!-- NAVBAR LARGE -->
-        <div class="w3-top">
+        <div class="w3-top" id="navbar" style="position:fixed; z-index: 1010;">
                 <div class="w3-bar w3-black w3-card-2">
-                        <span class="w3-left w3-green w3-padding-large w3-hide-medium w3-hide-large">J. Rasmussen</span>
+                        <a href="{{ site.url }}/index.html"><span class="w3-left w3-green w3-padding-large w3-hide-medium w3-hide-large">J. Rasmussen</span></a>
                         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="menu()"
                         title="Menu"><i class="fa fa-bars"></i></a>
                         <span class="w3-right w3-green w3-padding-large w3-hide-small">J. Rasmussen</span>
@@ -12,8 +12,7 @@
                 </div>
         </div>
         <!-- NAVBAR SMALL SCREENS -->
-        <div id="navSmall" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;">
-                <a href="{{ site.url }}/index.html" class="w3-bar-item w3-button w3-padding-large">home</a>
+        <div id="navSmall" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px;position:fixed; z-index: 1010;">
                 <a href="{{ site.url }}/about.html" class="w3-bar-item w3-button w3-padding-large">about</a>
                 <a href="{{ site.url }}/photos.html" class="w3-bar-item w3-button w3-padding-large">photos</a>
                 <a href="{{ site.url }}/blog.html" class="w3-bar-item w3-button w3-padding-large">blog</a>
@@ -29,4 +28,5 @@
                         x.className = x.className.replace(" w3-show", "");
                     }
                 }
+
         </script>
