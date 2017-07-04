@@ -10,28 +10,26 @@ title: J. Rasmussen
             /* The image used */
             background-image: url("http://i.imgur.com/qzMXmyE.jpg");
             /* Set a specific height */
-            height: 100vh; 
+            height: calc(100vh - 46px); 
 
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 200vh;
         }
-        @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+        @media only screen and (max-width: 375px) and (max-height: 667px){
             .parralax {
                 background-position: center;
                 height: 621px;
             }
         }
 </style>
-<div class="w3-content">
 <div class="parallax w3-display-container">
         <div class="w3-container w3-center w3-display-middle w3-black w3-padding-large w3-round ">
                 <h3>I'm Jayden</h3>
                 <h5>I make things</h5>
         </div>
-</div>
 </div>
 <!-- Large  -->
 <div class="w3-hide-small w3-center">
