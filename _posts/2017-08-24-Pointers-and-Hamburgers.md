@@ -8,8 +8,7 @@ Pointers are counter-intuitive. There's really no way around it, to new students
 
 Modern computing has made it possible to substantiate variables as needed with little effect on the performance of code (especially with languages like javascript). So, it can be difficult to understand why *pointing* to an address is more effective than simpling defining a new point in memory. 
 
-
-Let's make a better example. Everywhere I turned when I was learning the concept of pointers I read the example of a friend's house or a business but I think that example is too ethereal and doesn't quite do the concept justice (pointers really are a beautiful concept). Let's begin with a question.
+Everywhere I turned when I was learning the concept of pointers I read the example of a friend's house or a business but I think that example is too ethereal and doesn't quite do the concept justice (pointers really are a beautiful concept). Let's begin with a question.
 
 
 If you wanted to make a hamburger, what would you need?
