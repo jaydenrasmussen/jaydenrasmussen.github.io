@@ -1,6 +1,6 @@
 ---
 layout: gallery
-title: Training Season
+title: Training Sessions
 date: 2017-12-27
 images:
     - url: https://i.imgur.com/r2CSKxV.jpg
