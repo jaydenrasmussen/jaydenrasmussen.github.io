@@ -1,6 +1,6 @@
 # jaydenrasmussen.github.io
 
-> My Personal Website
+> My portfolio
 
 ## Build Setup
 
